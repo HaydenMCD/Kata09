@@ -1,0 +1,22 @@
+[
+  {
+    "ItemName": "A",
+    "UnitCost": 50,
+    "SpecialCount": 3,
+    "SpecialPrice": 130
+  },
+  {
+    "ItemName": "B",
+    "UnitCost": 30,
+    "SpecialCount": 2,
+    "SpecialPrice": 45
+  },
+  {
+    "ItemName": "C",
+    "UnitCost": 20
+  },
+  {
+    "ItemName": "D",
+    "UnitCost": 15
+  }
+]
