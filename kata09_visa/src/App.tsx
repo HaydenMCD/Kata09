@@ -2,6 +2,7 @@ import "./Styles/App.css";
 import ItemListing from "./Components/Item/ItemListing";
 import items from "./PriceData.json";
 import { itemProperties } from "./Components/Item/ItemListing";
+import Cart from "./Components/Cart/Cart";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           );
         })}
       </div>
+      <Cart />
     </div>
   );
 }
