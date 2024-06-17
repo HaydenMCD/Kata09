@@ -8,6 +8,12 @@ const Cart = () => {
     currentCart = JSON.parse(currentCart) as string;
   }
 
+  let result: { [key: string]: number } = {};
+
+  currentCart.split("").forEach((char) => {
+    result[char] = (result[char] || 0) + 1;
+  });
+
   return (
     <div>
       <pre> {currentCart} </pre>
