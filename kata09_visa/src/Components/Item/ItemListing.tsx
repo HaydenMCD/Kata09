@@ -1,19 +1,23 @@
-import "./Item.css";
 import ScanButton from "../ScanButton/ScanButton";
+import "../../Styles/ItemListing.css";
 
 export interface itemProperties {
   ItemName: string;
-  UnitCost: number;
+  UnitCost?: number;
   SpecialCount?: number;
   SpecialPrice?: number;
 }
 
-const Item = (props: itemProperties) => {
+interface ItemProps extends itemProperties {
+  id: number;
+}
+
+const Item = (props: ItemProps) => {
   return (
     <div className="itemContainer">
       <p>Item: {props.ItemName}</p>
       <p>Cost: {props.UnitCost}</p>
-      <ScanButton />
+      <ScanButton id={props.id} />
     </div>
   );
 };

@@ -1,0 +1,8 @@
+.itemContainer {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 10px;
+  padding: 0 10px 10px 10px;
+  margin: 10px;
+  border: 2px solid gray;
+}

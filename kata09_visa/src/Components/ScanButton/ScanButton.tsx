@@ -1,9 +1,19 @@
-import "./ScanButton.css";
+import "../../Styles/ScanButton.css";
 
-const ScanButton = () => {
+interface ScanButtonProps {
+  id: number;
+}
+
+const ScanButton = (props: ScanButtonProps) => {
+  const handleClick = () => {
+    console.log(props.id);
+  };
+
   return (
     <div className="scanButtonContainer">
-      <button className="scanButton"> Scan </button>
+      <button className="scanButton" onClick={handleClick}>
+        Scan
+      </button>
     </div>
   );
 };

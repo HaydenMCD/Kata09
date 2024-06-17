@@ -11,13 +11,13 @@
   line-height: 30px;
   font-weight: 400;
   text-align: center;
-  :hover {
+}
+
+.scanButton:hover {
     background-color: #005fb2;
     border-color: #005fb2;
   }
-}
 
 .scanButtonContainer {
   padding-left: 10px;
-  padding-top: 10px;
 }
