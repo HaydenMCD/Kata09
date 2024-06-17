@@ -1,4 +1,5 @@
 import "../../Styles/ScanButton.css";
+import items from "../../PriceData.json";
 
 interface ScanButtonProps {
   id: number;
@@ -6,7 +7,16 @@ interface ScanButtonProps {
 
 const ScanButton = (props: ScanButtonProps) => {
   const handleClick = () => {
-    console.log(props.id);
+    let currentCart = localStorage.getItem("cart");
+    let selectedItem = items[props.id].ItemName;
+
+    if (currentCart == null) {
+      localStorage.setItem("cart", JSON.stringify(selectedItem));
+    } else {
+      currentCart = JSON.parse(currentCart) as string;
+      let newCart = currentCart.concat(selectedItem);
+      localStorage.setItem("cart", JSON.stringify(newCart));
+    }
   };
 
   return (
