@@ -1,4 +1,4 @@
-import React from "react";
+import items from "../../PriceData.json";
 
 const Cart = () => {
   let currentCart = localStorage.getItem("cart");
@@ -13,6 +13,12 @@ const Cart = () => {
   currentCart.split("").forEach((char) => {
     result[char] = (result[char] || 0) + 1;
   });
+
+  for (let i = 0; i < items.length; i++) {
+    let tempItemName = items[i].ItemName;
+    let tempItemNameString = result[tempItemName].toString();
+    localStorage.setItem(tempItemName, tempItemNameString);
+  }
 
   return (
     <div>
