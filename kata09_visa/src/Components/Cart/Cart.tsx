@@ -21,7 +21,9 @@ const initialItemCount: Map<string, number> = new Map(
 const Cart = ({ cartCleared, onClearCart }: CartProps) => {
   const [itemCount, setItemCount] =
     useState<Map<string, number>>(initialItemCount);
+
   const [totalPrice, setTotalPrice] = useState<number>(0);
+  const [totalAmountSaved, setTotalAmountSaved] = useState<number>(0);
 
   const countItems = (cart: string[]): Map<string, number> => {
     const countMap = new Map<string, number>(initialItemCount);
@@ -57,10 +59,28 @@ const Cart = ({ cartCleared, onClearCart }: CartProps) => {
     return total;
   };
 
+  const calculateAmountSaved = (
+    itemCount: Map<string, number>,
+    itemsData: Item[]
+  ) => {
+    let totalAmountSaved = 0;
+    itemCount.forEach((count, itemName) => {
+      const item = itemsData.find((i) => i.ItemName === itemName);
+      if (item) {
+        totalAmountSaved += item.UnitCost * count;
+      }
+    });
+    return totalAmountSaved;
+  };
+
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem("cart") || "[]");
     const counts = countItems(storedCart);
     setItemCount(counts);
+
+    const totalWithoutDiscount = calculateAmountSaved(counts, itemsData);
+    setTotalAmountSaved(totalWithoutDiscount);
+
     const total = calculateTotalPrice(counts, itemsData);
     setTotalPrice(total);
   }, []);
@@ -76,6 +96,7 @@ const Cart = ({ cartCleared, onClearCart }: CartProps) => {
         ))}
       </ul>
       <h4>Total Price: ${totalPrice}</h4>
+      <h4>Amount Saved: ${totalAmountSaved - totalPrice}</h4>
       <ClearCartButton onClearCart={onClearCart} />
     </div>
   );
