@@ -14,29 +14,31 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <div className="appWrapper">
-        <h1> Your Cart</h1>
-        <div className="headingWrapper">
-          <p className="itemHeading">Item</p>
-          <p className="priceHeading">Price</p>
-          <p className="specialHeading">Special</p>
+    <>
+      <h1 className="headerTitle"> Your Cart</h1>
+      <div className="App">
+        <div>
+          <div className="headingWrapper">
+            <p className="itemHeading">Item</p>
+            <p className="priceHeading">Price</p>
+            <p className="specialHeading">Special</p>
+          </div>
+          {items.map((i: itemProperties, index: number) => {
+            return (
+              <ItemListing
+                key={index}
+                id={index}
+                ItemName={i.ItemName}
+                UnitCost={i.UnitCost}
+                SpecialPrice={i.SpecialPrice}
+                SpecialCount={i.SpecialCount}
+              />
+            );
+          })}
         </div>
-        {items.map((i: itemProperties, index: number) => {
-          return (
-            <ItemListing
-              key={index}
-              id={index}
-              ItemName={i.ItemName}
-              UnitCost={i.UnitCost}
-              SpecialPrice={i.SpecialPrice}
-              SpecialCount={i.SpecialCount}
-            />
-          );
-        })}
+        <Cart cartCleared={cartCleared} onClearCart={handleClearCart} />
       </div>
-      <Cart cartCleared={cartCleared} onClearCart={handleClearCart} />
-    </div>
+    </>
   );
 }
 

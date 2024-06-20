@@ -1,6 +1,15 @@
 .cartWrapper {
-  width: 800px;
-  margin: 0;
-  padding: 0;
-  border: 2px solid gray;
+  width: 400px;
+  border: 2px solid rgb(68, 68, 68);
+  padding: 10px;
+  margin-left: 50px;
+}
+
+.totalLabel {
+  font-size: 20px;
+}
+
+.savedLabel {
+  font-size: 20px;
+  color: rgb(2, 189, 2);
 }

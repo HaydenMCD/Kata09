@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import itemsData from "../../PriceData.json";
 import ClearCartButton from "../ClearCartButton/ClearCartButton";
+import "../../Styles/Cart.css";
 
 interface Item {
   ItemName: string;
@@ -86,20 +87,24 @@ const Cart = ({ cartCleared, onClearCart }: CartProps) => {
   }, []);
 
   return (
-    <div className="cartWrapper">
-      <ul>
-        {Array.from(itemCount.entries()).map(([itemName, count]) => (
-          <p key={itemName}>
-            {itemName}: {count}
-          </p>
-        ))}
-      </ul>
+    <div>
+      <div className="cartWrapper">
+        <ul>
+          {Array.from(itemCount.entries()).map(([itemName, count]) => (
+            <p key={itemName}>
+              {itemName}: {count}
+            </p>
+          ))}
+        </ul>
 
-      <h4>Total Price: ${totalPrice}</h4>
+        <p className="totalLabel">Total Price: ${totalPrice}</p>
 
-      <h4>Amount Saved: ${totalAmountSaved - totalPrice}</h4>
+        <p className="savedLabel">
+          Amount Saved: ${totalAmountSaved - totalPrice}
+        </p>
 
-      <ClearCartButton onClearCart={onClearCart} />
+        <ClearCartButton onClearCart={onClearCart} />
+      </div>
     </div>
   );
 };
