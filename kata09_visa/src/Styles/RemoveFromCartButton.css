@@ -1,0 +1,20 @@
+.removeButton {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  padding: 0 16px;
+  background-color: #d20000;
+  border-radius: 0.25rem;
+  border: 1px solid #d20000;
+  color: #fff;
+  font-size: 13px;
+  line-height: 30px;
+  font-weight: 400;
+  text-align: center;
+  margin-right: 15px;
+}
+
+.removeButton:hover {
+  background-color: #ad0101;
+  border-color: #ad0101;
+}

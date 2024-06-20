@@ -9,7 +9,7 @@
   width: 800px;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  padding-left: 120px;
+  padding-left: 110px;
 }
 
 .itemHeading {
@@ -18,13 +18,13 @@
 }
 
 .priceHeading {
-  padding-left: 20%;
+  padding-left: 17%;
   margin: 0;
   font-size: 20px;
 }
 
 .specialHeading {
-  padding-left: 34%;
+  padding-left: 28%;
   margin: 0;
   font-size: 20px;
 }

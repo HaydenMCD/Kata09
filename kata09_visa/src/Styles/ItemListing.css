@@ -25,4 +25,5 @@
   grid-column: 4;
   padding-top: 11px;
   padding-right: 10px;
+  display: flex;
 }

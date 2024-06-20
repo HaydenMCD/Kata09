@@ -1,5 +1,6 @@
 import ScanButton from "../ScanButton/ScanButton";
 import "../../Styles/ItemListing.css";
+import RemoveFromCartButton from "../RemoveFromCartButton/RemoveFromCartButton";
 
 export interface itemProperties {
   ItemName: string;
@@ -25,6 +26,7 @@ const Item = (props: ItemProps) => {
           </p> 
         )}
         <div className="buttonWrapper">
+          <RemoveFromCartButton id={props.id} />
           <ScanButton id={props.id} />
         </div>
       </div>

@@ -26,7 +26,7 @@ const ScanButton = (props: ScanButtonProps) => {
   return (
     <div className="scanButtonContainer">
       <button className="scanButton" onClick={handleClick}>
-        Scan
+        +
       </button>
     </div>
   );
