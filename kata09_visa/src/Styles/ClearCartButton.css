@@ -1,19 +1,18 @@
-.scanButton {
-  display: inline-block;
-  outline: none;
+.clearCartButton {
   cursor: pointer;
-  padding: 0 16px;
+  padding: 5px 110px;
   background-color: #0070d2;
   border-radius: 0.25rem;
   border: 1px solid #0070d2;
   color: #fff;
-  font-size: 13px;
+  font-size: 18px;
   line-height: 30px;
   font-weight: 400;
   text-align: center;
+  margin-bottom: 20px;
 }
 
-.scanButton:hover {
-    background-color: #005fb2;
-    border-color: #005fb2;
-  }
+.clearCartButton:hover {
+  background-color: #005fb2;
+  border-color: #005fb2;
+}

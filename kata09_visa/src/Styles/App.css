@@ -1,0 +1,46 @@
+.App {
+  margin-top: 10px;
+  margin-left: 3%;
+  display: inline-flex;
+  background-color: rgb(218, 218, 218);
+}
+
+.headingWrapper {
+  width: 800px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  padding-left: 120px;
+}
+
+.itemHeading {
+  font-size: 20px;
+  margin: 0;
+}
+
+.priceHeading {
+  padding-left: 20%;
+  margin: 0;
+  font-size: 20px;
+}
+
+.specialHeading {
+  padding-left: 34%;
+  margin: 0;
+  font-size: 20px;
+}
+
+.headerTitle {
+  padding-left: 30px;
+  padding-top: 10px;
+  font-size: 42px;
+  background-color: rgb(65, 65, 65);
+  margin: 0;
+  padding-bottom: 15px;
+  color: white;
+  margin-bottom: 50px;
+}
+
+.cartTitle {
+  font-size: 30px;
+  padding-left: 75px;
+}

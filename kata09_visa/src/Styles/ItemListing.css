@@ -1,8 +1,28 @@
 .itemContainer {
-  display: inline-grid;
-  grid-template-columns: 1fr 1fr;
-  padding-bottom: 10px;
-  padding: 0 10px 10px 10px;
   margin: 10px;
+  margin-left: 100px;
   border: 2px solid gray;
+  width: 800px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.itemName {
+  padding: 0 20px 0 20px;
+  grid-column: 1;
+}
+
+.itemCost {
+  padding: 0 20px 0 20px;
+  grid-column: 2;
+}
+
+.itemSpecial {
+  grid-column: 3;
+}
+
+.buttonWrapper {
+  grid-column: 4;
+  padding-top: 11px;
+  padding-right: 10px;
 }

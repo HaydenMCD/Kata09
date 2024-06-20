@@ -3,9 +3,9 @@ import "../../Styles/ItemListing.css";
 
 export interface itemProperties {
   ItemName: string;
-  UnitCost?: number;
-  SpecialCount?: number;
-  SpecialPrice?: number;
+  UnitCost: number;
+  SpecialCount: number;
+  SpecialPrice: number;
 }
 
 interface ItemProps extends itemProperties {
@@ -13,12 +13,22 @@ interface ItemProps extends itemProperties {
 }
 
 const Item = (props: ItemProps) => {
+  console.log(props);
   return (
-    <div className="itemContainer">
-      <p>Item: {props.ItemName}</p>
-      <p>Cost: {props.UnitCost}</p>
-      <ScanButton id={props.id} />
-    </div>
+    <>
+      <div className="itemContainer">
+        <p className="itemName">{props.ItemName}</p>
+        <p className="itemCost">{props.UnitCost}</p>
+        {props.SpecialCount > 0 && (
+          <p className="itemSpecial">
+            {props.SpecialCount} for {props.SpecialPrice}
+          </p> 
+        )}
+        <div className="buttonWrapper">
+          <ScanButton id={props.id} />
+        </div>
+      </div>
+    </>
   );
 };
 
