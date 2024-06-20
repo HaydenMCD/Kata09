@@ -1,5 +1,6 @@
 .itemContainer {
   margin: 10px;
+  margin-left: 100px;
   border: 2px solid gray;
   width: 800px;
   display: grid;

@@ -89,21 +89,27 @@ const Cart = ({ cartCleared, onClearCart }: CartProps) => {
   return (
     <div>
       <div className="cartWrapper">
-        <ul>
-          {Array.from(itemCount.entries()).map(([itemName, count]) => (
-            <p key={itemName}>
-              {itemName}: {count}
-            </p>
-          ))}
-        </ul>
+        <div className="cartItemWrapper">
+          <ul className="cartItem">
+            {Array.from(itemCount.entries()).map(([itemName, count]) => (
+              <p key={itemName}>
+                {itemName}: {count}
+              </p>
+            ))}
+          </ul>
+        </div>
 
-        <p className="totalLabel">Total Price: ${totalPrice}</p>
+        <div className="priceWrapper">
+          <p className="totalLabel">Total Price: ${totalPrice}</p>
 
-        <p className="savedLabel">
-          Amount Saved: ${totalAmountSaved - totalPrice}
-        </p>
+          <p className="savedLabel">
+            Amount Saved: ${totalAmountSaved - totalPrice}
+          </p>
+        </div>
 
-        <ClearCartButton onClearCart={onClearCart} />
+        <div className="clearCartButtonWrapper">
+          <ClearCartButton onClearCart={onClearCart} />
+        </div>
       </div>
     </div>
   );

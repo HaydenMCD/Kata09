@@ -1,15 +1,36 @@
 .cartWrapper {
-  width: 400px;
+  width: 350px;
   border: 2px solid rgb(68, 68, 68);
-  padding: 10px;
-  margin-left: 50px;
+  margin-left: 100px;
 }
 
 .totalLabel {
   font-size: 20px;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  width: 310px;
+  padding-bottom: 10px;
+  transform: translateY(10px);
 }
 
 .savedLabel {
   font-size: 20px;
   color: rgb(2, 189, 2);
+}
+
+.cartItem {
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.clearCartButtonWrapper {
+  text-align: center;
+}
+
+.cartItemWrapper {
+  padding-left: 20px;
+}
+
+.priceWrapper {
+  padding-left: 20px;
 }

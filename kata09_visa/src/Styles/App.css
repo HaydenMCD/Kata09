@@ -9,7 +9,7 @@
   width: 800px;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  padding-left: 20px;
+  padding-left: 120px;
 }
 
 .itemHeading {
@@ -37,4 +37,10 @@
   margin: 0;
   padding-bottom: 15px;
   color: white;
+  margin-bottom: 50px;
+}
+
+.cartTitle {
+  font-size: 30px;
+  padding-left: 75px;
 }

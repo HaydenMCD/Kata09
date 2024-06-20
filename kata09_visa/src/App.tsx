@@ -15,7 +15,8 @@ function App() {
 
   return (
     <>
-      <h1 className="headerTitle"> Your Cart</h1>
+      <h1 className="headerTitle"> The ABC company</h1>
+      <p className="cartTitle">Your cart</p>
       <div className="App">
         <div>
           <div className="headingWrapper">

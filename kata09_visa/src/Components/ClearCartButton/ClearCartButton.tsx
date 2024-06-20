@@ -1,3 +1,5 @@
+import "../../Styles/ClearCartButton.css";
+
 interface ClearCartButtonProps {
   onClearCart: () => void;
 }
@@ -12,7 +14,9 @@ const ClearCartButton = ({ onClearCart }: ClearCartButtonProps) => {
 
   return (
     <div>
-      <button onClick={handleClearCart}>Clear Cart</button>
+      <button onClick={handleClearCart} className="clearCartButton">
+        CHECKOUT
+      </button>
     </div>
   );
 };
