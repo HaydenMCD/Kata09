@@ -14,13 +14,12 @@ interface CartProps {
   onClearCart: () => void;
 }
 
-const Cart = ({ cartCleared, onClearCart }: CartProps) => {
-  const initialItemCount: Map<string, number> = new Map(
-    itemsData.map((item) => [item.ItemName, 0])
-  );
+const initialItemCount: Map<string, number> = new Map(
+  itemsData.map((item) => [item.ItemName, 0])
+);
 
-  const [itemCount, setItemCount] =
-    useState<Map<string, number>>(initialItemCount);
+const Cart = ({ cartCleared, onClearCart }: CartProps) => {
+  const [itemCount, setItemCount] = useState<Map<string, number>>(initialItemCount);
   const [totalPrice, setTotalPrice] = useState<number>(0);
 
   // useEffect used to update UI when cart is updated
@@ -67,7 +66,7 @@ const Cart = ({ cartCleared, onClearCart }: CartProps) => {
     setItemCount(counts);
     const total = calculateTotalPrice(counts, itemsData);
     setTotalPrice(total);
-  }, [initialItemCount, cartCleared]);
+  }, [cartCleared]);
 
   // Resets counts when cart is cleared
   useEffect(() => {
@@ -76,14 +75,14 @@ const Cart = ({ cartCleared, onClearCart }: CartProps) => {
       setTotalPrice(0);
       onClearCart();
     }
-  }, [cartCleared, initialItemCount, onClearCart]);
+  }, [cartCleared, onClearCart]);
 
   return (
     <div>
       <h3>Your cart:</h3>
       <ul>
         {Array.from(itemCount.entries()).map(([itemName, count]) => (
-          <p>
+          <p key={itemName}>
             {itemName}: {count}
           </p>
         ))}
