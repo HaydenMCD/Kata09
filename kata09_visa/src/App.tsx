@@ -15,7 +15,13 @@ function App() {
 
   return (
     <div className="App">
-      <div>
+      <div className="appWrapper">
+        <h1> Your Cart</h1>
+        <div className="headingWrapper">
+          <p className="itemHeading">Item</p>
+          <p className="priceHeading">Price</p>
+          <p className="specialHeading">Special</p>
+        </div>
         {items.map((i: itemProperties, index: number) => {
           return (
             <ItemListing
@@ -23,6 +29,8 @@ function App() {
               id={index}
               ItemName={i.ItemName}
               UnitCost={i.UnitCost}
+              SpecialPrice={i.SpecialPrice}
+              SpecialCount={i.SpecialCount}
             />
           );
         })}

@@ -1,0 +1,29 @@
+.App {
+  margin-top: 10px;
+  margin-left: 3%;
+  display: inline-flex;
+}
+
+.headingWrapper {
+  width: 800px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  padding-left: 20px;
+}
+
+.itemHeading {
+  font-size: 20px;
+  margin: 0;
+}
+
+.priceHeading {
+  padding-left: 20%;
+  margin: 0;
+  font-size: 20px;
+}
+
+.specialHeading {
+  padding-left: 34%;
+  margin: 0;
+  font-size: 20px;
+}

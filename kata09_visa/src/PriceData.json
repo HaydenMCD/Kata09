@@ -13,10 +13,14 @@
   },
   {
     "ItemName": "C",
-    "UnitCost": 20
+    "UnitCost": 20,
+    "SpecialCount": 0,
+    "SpecialPrice": 0
   },
   {
     "ItemName": "D",
-    "UnitCost": 15
+    "UnitCost": 15,
+    "SpecialCount": 0,
+    "SpecialPrice": 0
   }
 ]

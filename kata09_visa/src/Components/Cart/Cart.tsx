@@ -86,8 +86,7 @@ const Cart = ({ cartCleared, onClearCart }: CartProps) => {
   }, []);
 
   return (
-    <div>
-      <h3>Your cart:</h3>
+    <div className="cartWrapper">
       <ul>
         {Array.from(itemCount.entries()).map(([itemName, count]) => (
           <p key={itemName}>
@@ -95,8 +94,11 @@ const Cart = ({ cartCleared, onClearCart }: CartProps) => {
           </p>
         ))}
       </ul>
+
       <h4>Total Price: ${totalPrice}</h4>
+
       <h4>Amount Saved: ${totalAmountSaved - totalPrice}</h4>
+
       <ClearCartButton onClearCart={onClearCart} />
     </div>
   );
