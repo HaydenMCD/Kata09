@@ -1,11 +1,18 @@
-const ClearCartButton = () => {
-  function handleClick() {
+interface ClearCartButtonProps {
+  onClearCart: () => void;
+}
+
+// Clears the cart and refreshes the page
+const ClearCartButton = ({ onClearCart }: ClearCartButtonProps) => {
+  const handleClearCart = () => {
     localStorage.removeItem("cart");
-  }
+    onClearCart();
+    window.location.reload();
+  };
 
   return (
     <div>
-      <button onClick={handleClick}>Clear Cart</button>
+      <button onClick={handleClearCart}>Clear Cart</button>
     </div>
   );
 };
