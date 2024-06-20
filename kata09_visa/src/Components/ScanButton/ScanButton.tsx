@@ -19,6 +19,8 @@ const ScanButton = (props: ScanButtonProps) => {
       let newCart = currentCart.concat(selectedItem);
       localStorage.setItem("cart", JSON.stringify(newCart));
     }
+
+    window.location.reload();
   };
 
   return (
